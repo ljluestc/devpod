@@ -26,11 +26,8 @@ command_exists() {
 }
 
 is_arm() {
-  case "$(uname -a)" in
-  *arm* ) true;;
-  *arm64* ) true;;
-  *aarch* ) true;;
-  *aarch64* ) true;;
+  case "$(uname -m)" in
+  *arm* | *aarch* ) true;;
   * ) false;;
   esac
 }
