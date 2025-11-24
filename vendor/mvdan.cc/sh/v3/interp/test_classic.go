@@ -103,7 +103,7 @@ func (p *testParser) testExprBase(fval string) syntax.TestExpr {
 	}
 }
 
-// testUnaryOp is an exact copy of syntax's.
+// testUnaryOp is an exact copy of syntax's.'
 func testUnaryOp(val string) syntax.UnTestOperator {
 	switch val {
 	case "!":
@@ -161,7 +161,7 @@ func testUnaryOp(val string) syntax.UnTestOperator {
 	}
 }
 
-// testBinaryOp is like syntax's, but with -a and -o, and without =~.
+// testBinaryOp is like syntax's, but with -a and -o, and without =~.'
 func testBinaryOp(val string) syntax.BinTestOperator {
 	switch val {
 	case "-a":

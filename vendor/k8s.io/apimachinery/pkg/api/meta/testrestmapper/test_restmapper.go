@@ -108,7 +108,7 @@ func newRESTMapper(group string, scheme *runtime.Scheme) meta.RESTMapper {
 	return mapper
 }
 
-// hardcoded is good enough for the test we're running
+// hardcoded is good enough for the test we're running'
 var rootScopedKinds = map[schema.GroupKind]bool{
 	{Group: "admission.k8s.io", Kind: "AdmissionReview"}: true,
 
@@ -150,7 +150,7 @@ var rootScopedKinds = map[schema.GroupKind]bool{
 	{Group: "wardle.example.com", Kind: "Fischer"}: true,
 }
 
-// hardcoded is good enough for the test we're running
+// hardcoded is good enough for the test we're running'
 var ignoredKinds = sets.NewString(
 	"ListOptions",
 	"DeleteOptions",

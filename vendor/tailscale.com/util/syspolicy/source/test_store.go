@@ -29,7 +29,7 @@ type TestValueType interface {
 
 // TestSetting is a policy setting in a [TestStore].
 type TestSetting[T TestValueType] struct {
-	// Key is the setting's unique identifier.
+	// Key is the setting's unique identifier.'
 	Key setting.Key
 	// Error is the error to be returned by the [TestStore] when reading
 	// a policy setting with the specified key.
@@ -54,7 +54,7 @@ func TestSettingWithError[T TestValueType](key setting.Key, err error) TestSetti
 
 // testReadOperation describes a single policy setting read operation.
 type testReadOperation struct {
-	// Key is the setting's unique identifier.
+	// Key is the setting's unique identifier.'
 	Key setting.Key
 	// Type is a value type of a read operation.
 	// [setting.BooleanValue], [setting.IntegerValue], [setting.StringValue] or [setting.StringListValue]
@@ -63,7 +63,7 @@ type testReadOperation struct {
 
 // TestExpectedReads is the number of read operations with the specified details.
 type TestExpectedReads struct {
-	// Key is the setting's unique identifier.
+	// Key is the setting's unique identifier.'
 	Key setting.Key
 	// Type is a value type of a read operation.
 	// [setting.BooleanValue], [setting.IntegerValue], [setting.StringValue] or [setting.StringListValue]
@@ -87,7 +87,7 @@ type TestStore struct {
 
 	mu           sync.RWMutex
 	suspendCount int                 // change callback are suspended if > 0
-	mr, mw       map[setting.Key]any // maps for reading and writing; they're the same unless the store is suspended.
+	mr, mw       map[setting.Key]any // maps for reading and writing; they're the same unless the store is suspended.'
 	cbs          set.HandleSet[func()]
 	closed       bool
 
